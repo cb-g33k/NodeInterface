@@ -15,7 +15,6 @@ import './App.css';
 function CustomersModule() {
   return (
     <div>
-      <NavLinks></NavLinks>
       <CustomerList></CustomerList>
       <CustomerForm></CustomerForm>
       <Footer></Footer>      
@@ -81,7 +80,7 @@ function Custom(props){
     console.log("YES loggedin");
     return (
       <div>
-    <Route exact path="/" render={() => (<Redirect to="/home"/>)}/>
+    <Route exact path="/" render={() => (<Redirect to="/customer"/>)}/>
     <Route path="/login" component={Login} />
     <Route path="/home" component={HomePage} />
     <Route path="/customers" component={CustomersModule} />
@@ -99,7 +98,7 @@ function App({login}) {
   return (
     <Router>
     <div className="App">
-        <h1>Events App</h1>
+        <h1>Customer App Secured</h1>
         <Custom login={login} />
     </div>
     </Router>
